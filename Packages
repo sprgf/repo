@@ -1,0 +1,18 @@
+Package: com.victorlobe.appstorefix
+Version: 3
+Architecture: iphoneos-arm
+Maintainer: Victor <contact@victorlobe.me>
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Conflicts: com.skyglow.itunesstorex, net.nekokawa.appstorefix
+Filename: ./debs/tweaks/com.victorlobe.appstorefix_3_iphoneos-arm.deb
+Size: 73586
+MD5sum: 32fae1cbba710f3e952879b92ca3497f
+SHA1: 51a29e245480f4e11e177dc1049783685c6fe54b
+SHA256: 91526e993005ef0c0f79e476dbe5e0b6c206545fb67c29fddf25fdc663b70d5a
+Section: Tweaks
+Description: Fixes the App Store, iTunes Store, iBooks and Podcasts on iOS 3,5 and 6!
+Author: Victor <contact@victorlobe.me>
+Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.appstorefix
+Name: AppStoreFix
+
