@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repo>
+    <footerlinks>
+        <link>
+            <name>Repository by sprgf</name>
+            <url>https://github.com/sprgf/repo</url>
+            <iconclass>glyphicon glyphicon-user</iconclass>
+        </link>
+    </footerlinks>
+</repo>
