@@ -1,0 +1,43 @@
+
+name: Update Cydia Repository
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Packages index
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev
+          dpkg-scanpackages -m debs /dev/null > Packages
+          bzip2 -kf Packages
+
+      - name: Commit package indexes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Packages Packages.bz2
+          git diff --cached --quiet || git commit -m "Update Cydia package indexes"
+          git push
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v5
