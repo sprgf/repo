@@ -26,7 +26,6 @@ jobs:
           dpkg-scanpackages -m debs /dev/null > Packages
           bzip2 -kf Packages
 
-      - name: Commit package indexes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
